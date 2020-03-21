@@ -7,6 +7,10 @@ import numpy as np
 def midi_file_to_piano_roll(filename, fs):
 
     midi_pretty_format = pretty_midi.PrettyMIDI(filename)
+    print(type(midi_pretty_format.instruments))
+    print(len(midi_pretty_format.instruments))
+    if len(midi_pretty_format.instruments)==0:
+        return
     piano_midi = midi_pretty_format.instruments[0] # Get the piano channels
     piano_roll = piano_midi.get_piano_roll(fs=fs)
     
