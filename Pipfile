@@ -8,6 +8,11 @@ verify_ssl = true
 [packages]
 pretty-midi = "*"
 jupyterlab = "*"
+numpy = "*"
+matplotlib = "*"
+scipy = "*"
+keras = "*"
+tensorflow = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
